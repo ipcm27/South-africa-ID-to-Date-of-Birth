@@ -1,0 +1,6 @@
+<label>ID number</label>
+<input type="text" [(ngModel)]="id" (ngModelChange)="onKeydownId($event)" />
+<h1>this is my Id {{ id }}</h1>
+
+<label>Date Of Birth</label>
+<input type="text" placeholder="{{ dob }}" />
