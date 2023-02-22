@@ -24,10 +24,12 @@ export class SaIdToDobComponent {
       const year = parseInt(this.id.slice(0, 2));
       const month = this.id.slice(2, 4);
       const day = this.id.slice(4, 6);
+      let yearDividedeBy100 = new Date().getFullYear() % 100;
 
       if (year < 10) {
         this.dob = '200' + year + '/' + month + '/' + day;
       } else if (year < new Date().getFullYear() % 100) {
+        console.log(yearDividedeBy100);
         this.dob = '20' + year + '/' + month + '/' + day;
       } else {
         this.dob = '19' + year + '/' + month + '/' + day;

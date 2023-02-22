@@ -36,4 +36,11 @@ describe('SaIdToDobComponent', () => {
     component.onKeydownId(mockEvent);
     expect(component.dob).toEqual('1990/01/01');
   });
+
+  it('should espect that persons bornb before 1923 to be date with 19...', () => {
+    component.id = '240101';
+    const mockEvent = new Event('keydown');
+    component.onKeydownId(mockEvent);
+    expect(component.dob).toEqual('1925/01/01');
+  });
 });
