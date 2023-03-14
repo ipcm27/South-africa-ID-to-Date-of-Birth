@@ -1,0 +1,94 @@
+<!-- <mat-card class="card-pre-auth">
+  <alert></alert>
+  <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+    <form [formGroup]="clientValidation">
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <div class="id-image">
+          <img src="../../../../../assets/images/ill_client_id.svg" />
+        </div>
+        <div>
+          <p class="consultant-verificat">Client ID</p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around">
+          <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="radio-button-group"
+            formControlName="idType"
+          >
+            <mat-radio-button
+              class="radio-button"
+              (change)="updateType('SA')"
+              [checked]="type === 'SA'"
+              value="SA"
+            >
+              SA ID number
+            </mat-radio-button>
+            <span class="spacer2"></span>
+            <mat-radio-button
+              class="radio-button"
+              (change)="updateType('Passport')"
+              [checked]="type === 'Passport'"
+              value="Passport"
+            >
+              Passport
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="client-id-input">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ clientIDType }}</mat-label>
+            <input
+              #id
+              [placeholder]="clientIDType"
+              formControlName="id"
+              matInput
+              maxlength="13"
+              required
+            />
+           <mat-error>{{
+              clientValidation.controls["id"].errors?.required
+                ? "Required"
+                : "Invalid"
+            }}</mat-error>
+          </mat-form-field>
+          <br />
+
+          <mat-form-field appearance="outline">
+            <mat-label>{{ clientDOB }}</mat-label>
+            <input
+              #dob
+              [placeholder]="clientDOB"
+              autocomplete="on"
+              formControlName="dob"
+              matInput
+              max="2022-12-31"
+              maxlength="13"
+              min="1900-01-01"
+              required
+              type="date"
+              ngModelChange="onKeydownId($event)"
+            />
+            <mat-error
+              >{{
+                clientValidation.controls["dob"].errors?.required
+                  ? "Required"
+                  : "Invalid"
+              }}
+              [(ngModel)]= "clientDOB"</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <button
+            (click)="validateClientAge()"
+            [disabled]="processing"
+            class="btn-blue"
+            mat-button
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card> -->

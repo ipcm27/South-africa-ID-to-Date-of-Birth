@@ -1,0 +1,167 @@
+<h1>Please fill the form</h1>
+
+<div [formGroup]="ricaFormGroup">
+  <span>
+    <div fxLayout="row" fxLayoutGap="32px">
+      <mat-form-field appearance="outline" class="long-text-form">
+        <mat-label>Address 1</mat-label>
+        <input
+          matInput
+          placeholder=""
+          label="As"
+          formControlName="ricaDetailsAddress1"
+          required
+          #addressLine1
+        />
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+    </div>
+  </span>
+
+  <span>
+    <div fxLayout="row" fxLayoutGap="32px">
+      <mat-form-field appearance="outline" class="long-text-form">
+        <mat-label>Address 2</mat-label>
+        <input
+          matInput
+          placeholder=""
+          label="As"
+          formControlName="ricaDetailsAddress2"
+        />
+      </mat-form-field>
+    </div>
+  </span>
+
+  <span>
+    <div fxLayout="row" fxLayoutGap="32px">
+      <mat-form-field appearance="outline">
+        <mat-label>Suburb</mat-label>
+        <input
+          matInput
+          placeholder=""
+          formControlName="ricaDetailsSuburb"
+          required
+        />
+        <mat-error>{{
+        ricaFormGroup.controls["ricaDetailsSuburb"].errors?.['required']
+          ? "Required"
+          : "Invalid"
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input
+          matInput
+          placeholder=""
+          formControlName="ricaDetailsCity"
+          required
+        />
+        <mat-error>{{
+        ricaFormGroup.controls["ricaDetailsCity"].errors?.['required']
+          ? "Required"
+          : "Invalid"
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+  </span>
+
+  <span>
+    <div fxLayout="row" fxLayoutGap="32px">
+      <mat-form-field appearance="outline">
+        <mat-label>Address Code</mat-label>
+        <input
+          matInput
+          placeholder=""
+          formControlName="ricaDetailsCode"
+          appNumber
+          appZipCodeValidator
+          required
+        />
+        <mat-error>{{
+        ricaFormGroup.controls["ricaDetailsCode"].errors?.['required']
+          ? "Required"
+          : "Invalid"
+        }}</mat-error>
+        <mat-error
+          *ngIf="
+            ricaFormGroup.controls['ricaDetailsCode'].hasError(' invalidInput')
+          "
+          >Please enter a 4-digit number</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Choose Province</mat-label>
+        <mat-icon
+          matPrefix
+          color="blue"
+          class="expand-more-arrow down-arrow-province"
+          >expand_more</mat-icon
+        >
+        <mat-select
+          placeholder="Choose Province"
+          matNativeControl
+          required
+          formControlName="ricaDetailsProvince"
+        >
+          <mat-option value="Eastern Cape">Eastern Cape</mat-option>
+          <mat-option value="Free State">Free State</mat-option>
+          <mat-option value="Gauteng">Gauteng</mat-option>
+          <mat-option value="Kwazulu Natal">Kwazulu Natal</mat-option>
+          <mat-option value="Limpopo">Limpopo</mat-option>
+          <mat-option value="Mpumalanga">Mpumalanga</mat-option>
+          <mat-option value="Northern Cape">Northern Cape</mat-option>
+          <mat-option value="North West">North West</mat-option>
+          <mat-option value="Western Cape">Western Cape</mat-option>
+        </mat-select>
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+    </div>
+  </span>
+
+  <span>
+    <div fxLayout="column" fxLayoutGap="5px">
+      <mat-checkbox
+        name="checkVisual"
+        class="check-visual-id"
+        formControlName="ricaDetailsAddVerified"
+        tabindex="0"
+        required
+      >
+        <label class="text-normal"
+          >I have verified a valid proof of residential address *</label
+        >
+      </mat-checkbox>
+      <mat-error class="check-visual-id-error">
+        <span
+          *ngIf="
+            ricaTouched &&
+            ricaFormGroup.controls['ricaDetailsAddVerified'].invalid
+          "
+          >Required</span
+        >
+      </mat-error>
+      <mat-checkbox
+        name="checkVisual"
+        class="check-visual-id"
+        formControlName="ricaDetailsVerified"
+        required
+        tabindex="0"
+      >
+        <label class="text-normal"
+          >I have verified all RICA information and confirm it is correct
+          *</label
+        >
+      </mat-checkbox>
+      <mat-error class="check-visual-id-error">
+        <span
+          *ngIf="
+            ricaTouched && ricaFormGroup.controls['ricaDetailsVerified'].invalid
+          "
+          >Required</span
+        >
+      </mat-error>
+    </div>
+  </span>
+</div>

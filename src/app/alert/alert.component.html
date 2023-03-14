@@ -1,0 +1,8 @@
+<div *ngFor="let alert of alerts" class="{{cssClass(alert)}} alert-dismissable" >
+  <span style="position: absolute; margin-top: -3px;"><mat-icon matPrefix color="red">cancel</mat-icon></span>
+  <span style="padding-left: 35px">{{alert.message}}</span>
+  <button mat-icon-button (click)="removeAlert(alert)" class="alert-close mat-icon-button" type="button" tabindex="-1">
+    <mat-icon matPrefix color="red" >close</mat-icon>
+  </button>
+</div>
+

@@ -1,0 +1,47 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.id-image {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.radio-button-group {
+  margin-top: 20px;
+}
+
+.radio-button {
+  margin: 0px 15px;
+}
+
+.client-id-input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-blue {
+  margin-top: -8px !important;
+  margin-bottom: 5rem;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #009de0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  font-family: Roboto, arial;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  border: #009de0;
+}
+
+.textfield-background {
+  height: 48px;
+  width: 266px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #4e6066;
+  font-family: Flama;
+  font-size: 16px;
+  line-height: 16px;
+}

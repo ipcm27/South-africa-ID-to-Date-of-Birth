@@ -1,0 +1,74 @@
+{
+  "agentAuth": {
+    "agentNoMatch": "Consultant login failed, fingerprint match not found.",
+    "timeout": "Biometric timeout, please try again."
+  },
+  "clientIDVerification": {
+    "rsaIDInvalid": "Invalid RSA ID, please verify the entered number and try again.",
+    "passportInvalid": "Invalid passport number, please verify the passport number and try again.",
+    "simStockError": "Failure to retrieve SIM stock information, please try again.",
+    "noSIMStock": "You have no SIM stock available to issue to clients.",
+    "dobInvalid": "Please correct all form errors.",
+    "dobRestriction": "Client must be 18 years or older to register and RICA a SIM. Client logon not authorized.",
+    "maxYear": "system only accept year from 1920.",
+    "dobAndIdInvalid": "ID number and Date of Birth do not align, please correct the input, and try again.",
+    "allowedToRica": "Eligible to perform RICA",
+    "validDOBField": "Invalid date of birth, please correct the date and try again.",
+    "dobDateInvalid": "Invalid date input - Please try again"
+  },
+  "clientAuth": {
+    "clientNoMatch": "Client fingerprint match was not successful, please verify the client data that was entered and try again.",
+    "timeout": "Biometric timeout, please try again."
+  },
+  "clientFingerprintBypass": {
+    "InvalidCPNumber": "Please verify the CP number and try again.",
+    "CPLoggedIn": "Consultant 2 cannot be the same as the consultant logged onto the workstation."
+  },
+  "clientBypassConfirm": {
+    "uncheckedBox": "One or more options have not been confirmed."
+  },
+  "clientBypassAuth": {
+    "agent2NoMatch": "Consultant 2 biometric verification failed, fingerprint match not found.",
+    "timeout": "Biometric timeout, please try again."
+  },
+  "dashboard": {
+    "simStockError": "Failure to retrieve SIM stock information, please try again.",
+    "noSIMStock": "You have no SIM stock available to issue to the client.",
+    "maxSims": "Client has reached the maximum number of active SIMs allowed. No new SIMs can be issued to this client."
+  },
+  "newSIM": {
+    "ricaFormErrors": "One or more options have not been completed.",
+    "noSIMStock": "You have no SIM stock available to issue to the client.",
+    "simNotSelected": "Please select a SIM card.",
+    "authClientNoMatch": "Client verification was not successful, please try again.",
+    "authAgentNoMatch": "Consultant verification was not successful, please try again.",
+    "authTimeout": "Biometric timeout, please try again.",
+    "noICCID": "SIM Not selected.",
+    "newSIMFailed": "The SIM could not be issued, please select a different SIM and try again."
+  },
+  "porting": {
+    "typeUnselected": "Please select an option.",
+    "portFormErrors": "Please correct all form errors.",
+    "otpFormErrors": "Please correct all form errors.",
+    "otpInvalid": "Invalid OTP, please try again.",
+    "authClientNoMatch": "Client verification was not successful, please try again.",
+    "authAgentNoMatch": "Consultant fingerprint match was not successful, please try again.",
+    "authTimeout": "Biometric timeout, please try again."
+  },
+  "simSwap": {
+    "ricaFormErrors": "One or more options have not been completed.",
+    "getAgentSIMsFailed": "System Error",
+    "refreshAgentSIMsFailed": "System Error",
+    "reasonFormErrors": "Please correct all form errors.",
+    "authClientNoMatch": "Client fingerprint match was not successful, please try again.",
+    "authAgentNoMatch": "Consultant fingerprint match was not successful, please try again.",
+    "bioStoreTimeout": "Biometric timeout, please try again.",
+    "simSwapFailed": "The SIM could not be issued, please select a different SIM and retry the process."
+  },
+  "updateRica": {
+    "ricaFormErrors": "Please correct all form errors."
+  },
+  "changeOwner": {
+    "ricaFormErrors": "Please correct all form errors."
+  }
+}
